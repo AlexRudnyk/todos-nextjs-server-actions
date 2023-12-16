@@ -12,7 +12,7 @@ const Checkbox = ({ todo }: { todo: TodoProps }) => {
       type="checkbox"
       onChange={handleToggleTodoCompleted}
       checked={todo.isCompleted}
-      className="mr-7"
+      className="flex justify-center items-center mr-7 cursor-pointer appearance-none w-5 h-5 border-2 border-black rounded-md before:content-[''] before:w-3 before:h-3 before:bg-violet-600 before:rounded-sm before:scale-0 checked:before:scale-100"
     />
   );
 };
