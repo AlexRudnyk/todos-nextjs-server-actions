@@ -8,6 +8,11 @@ const todoSchema = new Schema(
       type: "string",
       required: true,
     },
+    isCompleted: {
+      type: "boolean",
+      default: false,
+      required: true,
+    },
   },
   { versionKey: false, timestamps: true }
 );

@@ -38,3 +38,23 @@ export async function deleteTodo(id: string) {
 
   revalidatePath("/");
 }
+
+export async function toggleTodoCompleted(id: string) {
+  try {
+    await connect();
+
+    const toggledTodo = await Todo.findById(id);
+
+    if (!toggledTodo) {
+      console.log("Todo is not found");
+      return;
+    }
+
+    toggledTodo.isCompleted = !toggledTodo.isCompleted;
+    toggledTodo.save();
+  } catch (error) {
+    console.log(error);
+  }
+
+  revalidatePath("/");
+}

@@ -1,5 +1,6 @@
 import ToDoForm from "./ToDoForm";
-import Todo from "./Todo";
+import TodoItem from "./TodoItem";
 import DeleteTodoBtn from "./DeleteTodoBtn";
+import Checkbox from "./Checkbox";
 
-export { ToDoForm, Todo, DeleteTodoBtn };
+export { ToDoForm, TodoItem, DeleteTodoBtn, Checkbox };

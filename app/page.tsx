@@ -1,5 +1,5 @@
 import { getAllTodos } from "@/actions";
-import { ToDoForm, Todo } from "@/components";
+import { ToDoForm, TodoItem } from "@/components";
 import { TodoProps } from "@/types";
 
 export default async function Home() {
@@ -12,7 +12,7 @@ export default async function Home() {
       <h1 className="text-3xl mb-8">Your list of Todos:</h1>
       <ul>
         {reversedTodos.map((todo: TodoProps) => (
-          <Todo key={todo._id} todo={todo} />
+          <TodoItem key={todo._id} todo={todo} />
         ))}
       </ul>
     </main>
